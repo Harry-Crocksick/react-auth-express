@@ -14,7 +14,7 @@ export default function Login({ setToken }: { setToken: (token: TokenProp) => vo
   });
 
   async function loginUser(credentials: InputProps) {
-    return fetch(`${import.meta.env.BACKEND_URL}/login`, {
+    return fetch(`https://marn-react-auth-express-backend-server.onrender.com/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
