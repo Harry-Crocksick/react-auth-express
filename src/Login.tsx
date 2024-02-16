@@ -14,7 +14,7 @@ export default function Login({ setToken }: { setToken: (token: TokenProp) => vo
   });
 
   async function loginUser(credentials: InputProps) {
-    return fetch('http://localhost:8088/login', {
+    return fetch(`${import.meta.env.BACKEND_URL}/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
